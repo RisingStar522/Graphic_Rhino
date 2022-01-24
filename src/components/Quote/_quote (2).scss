@@ -1,0 +1,35 @@
+.quote {
+  text-align: center;
+  padding: 3rem;
+  transition: all 0.3s;
+  border-radius: 10px;
+
+  &__icon {
+    height: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  &__quote {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 300;
+
+    @include respond(sm) {
+      line-height: 1.2;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 1rem 3rem rgba(13, 12, 40, 0.1);
+    @include respond(sm) {
+      transform: scale(1.01);
+    }
+  }
+}

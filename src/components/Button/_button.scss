@@ -1,0 +1,29 @@
+.btn {
+  display: inline-block;
+  font-size: 2.5rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  color: $color-primary;
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  outline: none;
+
+  padding: 0.3em 1.2em;
+
+  background-size: 201% 100%;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    $color-primary 50%
+  );
+  transition: background-position 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0.1s,
+    color 0.5s ease 0s, background-color 0.5s ease;
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: $color-primary;
+    background-position: -100% 100%;
+  }
+}

@@ -1,0 +1,35 @@
+.privacy {
+  &__container {
+    padding-bottom: 15rem;
+    padding-top: 15rem;
+    font-size: 1.8rem;
+    text-align: justify;
+    line-height: 3rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  ol,
+  ul {
+    margin-left: 3rem;
+  }
+}

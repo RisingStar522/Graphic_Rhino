@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @include respond(xl) {
+    font-size: 60%;
+  }
+  @include respond(lg) {
+    font-size: 56%;
+  }
+  @include respond(md) {
+    font-size: 50%;
+  }
+  @include respond(sm) {
+    font-size: 48%;
+  }
+  @include respond(xs) {
+    font-size: 45%;
+  }
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+input {
+  font-family: "Raleway", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1320px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+
+  @include respond(xl) {
+    max-width: 1140px;
+  }
+
+  @include respond(lg) {
+    max-width: 960px;
+  }
+  @include respond(md) {
+    max-width: 720px;
+  }
+  @include respond(sm) {
+    max-width: 540px;
+  }
+  @include respond(xs) {
+    width: 100%;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.image-gallery-icon .image-gallery-svg {
+  width: 40px;
+}
+
+.image-gallery-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center center;
+}
+
+.fullscreen .image-gallery-slide img {
+  max-height: 100vh;
+}

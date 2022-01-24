@@ -1,0 +1,66 @@
+.case {
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 15rem;
+    padding-top: 15rem;
+    align-items: center;
+    font-size: 1.8rem;
+    grid-auto-flow: dense;
+    row-gap: 10rem;
+    column-gap: 10rem;
+    text-align: justify;
+
+    @include respond(sm) {
+      grid-template-columns: 1fr;
+      row-gap: 5rem;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-title {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  &-content:not(:last-child) {
+    @include respond(sm) {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+.grid-img-r {
+  grid-column: 2/3;
+
+  @include respond(sm) {
+    grid-column: auto;
+  }
+}
+
+.grid-text-l {
+  grid-column: 1/2;
+
+  @include respond(sm) {
+    grid-column: auto;
+  }
+}
+
+.grid-full {
+  grid-column: 1/-1;
+  justify-content: stretch;
+}
+
+iframe {
+  width: 100%;
+  height: 60rem;
+}

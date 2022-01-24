@@ -1,0 +1,23 @@
+@mixin respond($size) {
+  @if $size == xl {
+    @media only screen and (max-width: 87.49875em) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media only screen and (max-width: 74.99875em) {
+      @content;
+    }
+  } @else if $size == md {
+    @media only screen and (max-width: 61.99875em) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media only screen and (max-width: 47.99875em) {
+      @content;
+    }
+  } @else if $size == xs {
+    @media only screen and (max-width: 35.99875em) {
+      @content;
+    }
+  }
+}

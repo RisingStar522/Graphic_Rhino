@@ -1,0 +1,38 @@
+.header {
+  position: relative;
+  height: 80rem;
+  background-color: red;
+  background-position: center;
+  background-size: cover;
+  color: $color-white;
+
+  &__logo {
+    position: absolute;
+    height: 7rem;
+    top: 6rem;
+    transform: translateY(-50%);
+    left: 3rem;
+    z-index: 100;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__content {
+    width: 60rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-align: justify;
+  }
+}

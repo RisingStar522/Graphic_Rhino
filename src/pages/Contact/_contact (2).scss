@@ -1,0 +1,201 @@
+.contact {
+  .information {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+
+    @include respond(xl) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .map {
+    height: 70rem;
+
+    @include respond(sm) {
+      height: 50rem;
+    }
+  }
+
+  &__content {
+    background-color: white;
+    padding: 7rem;
+    box-shadow: 5px 0 5px -5px #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form {
+    width: 100%;
+    max-width: 50rem;
+    display: grid;
+    column-gap: 3rem;
+    row-gap: 3rem;
+
+    &__error {
+      color: #ff0033;
+      position: absolute;
+      top: 103%;
+      font-size: 1.4rem;
+      right: 0;
+    }
+
+    &__input {
+      padding: 1rem;
+      width: 100%;
+      transition: all 0.3s;
+      font-size: 1.8rem;
+      color: rgb(85, 85, 85);
+      border: 1px solid lightgray;
+      border-radius: 3px;
+      transition: all 0.25s ease-in-out;
+
+      &:focus {
+        border: 1px solid #72c1a7;
+        outline: none;
+      }
+
+      @include respond(md) {
+        font-size: 2rem;
+      }
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.8rem;
+      position: relative;
+
+      &--message {
+        grid-column: 1/-1;
+
+        textarea {
+          resize: none;
+          height: 15rem;
+        }
+      }
+
+      label {
+        margin-bottom: 1rem;
+        color: black;
+        font-size: 1.6rem;
+
+        @include respond(md) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    &__border {
+      height: 2px;
+      width: 100%;
+      background-color: rgb(217, 217, 217);
+    }
+
+    &__fill {
+      height: 2px;
+      width: 0;
+      background-color: $color-primary;
+      transition: all 0.3s;
+    }
+  }
+
+  .form__input:focus-within + .form__border > .form__fill {
+    width: 100%;
+  }
+
+  .btn[type="submit"] {
+    grid-column: 1/-1;
+    justify-self: center;
+    margin-top: 2rem;
+  }
+}
+
+.btn-container {
+  margin-top: 3rem;
+  text-align: center;
+  justify-self: center;
+}
+.contact-btn {
+  outline: none;
+  height: 5rem;
+  text-align: center;
+  width: 15rem;
+  border-radius: 100px;
+  background: #fff;
+  border: 2px solid #72c1a7;
+  color: #72c1a7;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font: {
+    size: 1.6rem;
+    weight: bold;
+  }
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color: white;
+    background: #72c1a7;
+  }
+  &:active {
+    //letter-spacing: 2px;
+    letter-spacing: 2px;
+  }
+  &:after {
+    content: "VERZENDEN";
+  }
+}
+.onclick {
+  width: 5rem;
+  border-color: lightgray;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: #72c1a7;
+  animation: rotating 2s 0.25s linear infinite;
+
+  &:after {
+    content: "";
+  }
+  &:hover {
+    color: #72c1a7;
+    background: white;
+  }
+}
+.correct {
+  font-size: 1.6rem;
+  color: white;
+  background: #72c1a7;
+  &:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+  }
+}
+
+.incorrect {
+  font-size: 1.6rem;
+  color: white;
+  border-color: #ff0033;
+  background: #ff0033;
+  &:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00d";
+  }
+
+  &:hover {
+    border-color: #ff0033;
+    background: #ff0033;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

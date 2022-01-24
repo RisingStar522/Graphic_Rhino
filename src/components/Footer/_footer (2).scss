@@ -1,0 +1,106 @@
+.footer {
+  background-color: $color-grey;
+  font-size: 1.5rem;
+
+  @include respond(sm) {
+    font-size: 2rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    @include respond(sm) {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      row-gap: 5rem;
+      justify-items: center;
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    color: $color-primary;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__slogan {
+    color: $color-primary;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: block;
+  }
+
+  &__item {
+    color: $color-black;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__logo {
+    height: 8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond(sm) {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+      text-align: center;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    a:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    svg {
+      fill: $color-primary;
+    }
+
+    @include respond(sm) {
+      justify-content: center;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__about &__link {
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0;
+      background-color: $color-primary;
+      transition: all 0.2s;
+      margin-bottom: -2px;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

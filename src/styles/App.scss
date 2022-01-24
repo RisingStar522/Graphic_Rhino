@@ -1,0 +1,38 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+@import "./variables";
+@import "./mixins";
+@import "./base";
+@import "./typography";
+@import "./animations";
+
+@import "../components/Button/button";
+@import "../components/Menu/menu";
+@import "../components/Header/header";
+@import "../components/Footer/footer";
+@import "../components//Quote/quote";
+@import "../components/Service/_service";
+@import "../components/Explore/explore";
+@import "../components/TextBlock/textblock";
+@import "../components/Case/case";
+@import "../components/Masonry/masonry";
+@import "../components/Cookie/cookie";
+@import "../components/LogoCard/logocard";
+
+@import "../pages/About/about";
+@import "../pages/Blog/blog";
+@import "../pages/Cases/cases";
+@import "../pages/Contact/contact";
+@import "../pages/Diensten/diensten";
+@import "../pages/Graveyard/graveyard";
+@import "../pages/Home/home";
+@import "../pages/Edgard/Edgard";
+@import "../pages/Motors/Motors";
+@import "../pages/Privacy/Privacy";
+
+@import "../styles/allCases";
+@import "../styles//allBlogs";
+
+.Toastify__toast {
+  font-size: 1.4rem !important;
+}

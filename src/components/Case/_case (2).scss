@@ -1,0 +1,74 @@
+.case {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+  align-items: center;
+  padding-left: 5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &--mirror {
+    padding-left: 0;
+  }
+
+  &--mirror &__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  &--mirror &__content {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    @include respond(xs) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+
+  &__img {
+    height: 50rem;
+    display: block;
+    background-position: center;
+    background-size: cover;
+
+    @include respond(md) {
+      height: 40rem;
+    }
+    @include respond(sm) {
+      height: 35rem;
+    }
+    @include respond(xs) {
+      grid-column: auto;
+      grid-row: 1/2;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__desc {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    font-size: 2rem;
+  }
+
+  @include respond(xs) {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    padding: 5rem;
+  }
+}

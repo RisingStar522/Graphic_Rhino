@@ -1,0 +1,35 @@
+.service {
+  text-align: center;
+  padding: 3rem;
+  border-radius: 10px;
+  transition: all 0.3s;
+
+  &__icon {
+    height: 7rem;
+    margin-bottom: 3rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  &__desc {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 300;
+
+    @include respond(sm) {
+      line-height: 1.2;
+    }
+  }
+
+  &--hover:hover {
+    transform: scale(1.1);
+    box-shadow: 0 1rem 3rem rgba(13, 12, 40, 0.1);
+    @include respond(sm) {
+      transform: scale(1.01);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.graveyard {
+  .container {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+
+    @include respond(xs) {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    }
+  }
+
+  .case {
+    box-shadow: 0 4px 26px 0 rgba(15, 19, 49, 0.06);
+
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+
+      @include respond(xs) {
+        margin-bottom: 7rem;
+      }
+    }
+  }
+}
